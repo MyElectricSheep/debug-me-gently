@@ -1,0 +1,26 @@
+{
+  "name": "debug-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run front\" \"npm run back\"",
+    "front": "npm start --prefix ./debug-me-front",
+    "back": "npm start --prefix ./debug-me-back",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyElectricSheep/debug-me-gently.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyElectricSheep/debug-me-gently/issues"
+  },
+  "homepage": "https://github.com/MyElectricSheep/debug-me-gently#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
