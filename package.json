@@ -1,7 +1,7 @@
 {
   "name": "debug-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "A debugging exercise",
   "main": "index.js",
   "scripts": {
     "start": "concurrently --kill-others \"npm run front\" \"npm run back\"",
