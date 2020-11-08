@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>File Upload Exercise</title>
+  </head>
+  <body>
+    <form method="POST" action="http://localhost:3000/upload-profile-pic" enctype="multipart/form-data">
+        <div>
+            <label>Select your profile picture:</label>
+            <input type="file" name="profile_pic" />
+        </div>
+        <div>
+            <input type="submit" value="Upload Profile Pic" />
+        </div>
+    </form>
+    <br />
+    <hr />
+    <br />
+    <form method="POST" action="http://localhost:3000/upload-cat-pics" enctype="multipart/form-data">
+      <div>
+          <label>Select your cat pictures:</label>
+          <input type="file" name="cat_pics" multiple />
+      </div>
+      <div>
+          <input type="submit" value="Upload Cat Pics" />
+      </div>
+  </form>
+  </body>
+</html>
