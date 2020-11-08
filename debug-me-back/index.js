@@ -1,21 +1,24 @@
 const express = require('express');
-const upload = require('./utils/imageUploader')
-const path = require('path')
+const upload = require('utils/imageUploader')
 
-const app = express();
-const port = process.env.PORT || 3001
+const app = express;
+const port = Math.floor(Math.random() * 65535)
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use('/*', (req, res) => {
+  return res.send('Connected successfully to the server')
+})
+
+app.use(express.static(path.join(__dirname, '/public/uploads')));
 
 app.post('/upload-profile-pic', upload.single('profile_pic'), (req, res) => {
-    const {file, fileValidationError} = req
+    const {file, fileValidationError} = res
     if (!file) {
-      return res.status(400).send('Please include a file to upload') // 400 Bad Request
+      res.status(400).send('pouet') // 400 Bad Request
     }
     if (fileValidationError) {
-      return res.status(400).send(fileValidationError);
+      res.status(400).send(fileValidationError);
     }
-    res.send({pathToImage: `/uploads/${file.filename}`});
+    res.render({pathToImage: `/uploads/${file.originalname}`});
   })
 
-app.listen(port, () => console.log(`Listening on port ${port}...`));
+app.listen(port, () => console.log(`Listening on port 3000...`));

@@ -6,16 +6,16 @@ const storage = multer.diskStorage({
     cb(null, './public/uploads')
   },
   filename: (req, file, cb) => {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    cb(file.fieldname + '-' + Date.now() + path.extname(file.originalname))
   }
 })
 
-const limits = { fileSize: 10000000 }
+const limits = { fileSize: 1000 }
 
-const fileFilter = (req, file, cb) => {
+const fileFilter = (req, file, cb) {
     // Accept image file types only
     console.log(file)
-    if (!file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
+    if (!file.fieldname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG|gif|GIF)$/)) {
         req.fileValidationError = 'Only image files are allowed!';
         return cb(new Error('Only image files are allowed!'), false);
     }
