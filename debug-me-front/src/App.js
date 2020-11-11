@@ -32,7 +32,7 @@ const rejectStyle = {
   borderColor: "#ff1744",
 };
 
-export default function App() {
+const Home = () => {
   const [pathToPic, setPathToPic] = useState(null);
 
   const onDrop = useCallback((acceptedFiles) => {
@@ -93,3 +93,5 @@ export default function App() {
     </Grid>
   );
 }
+
+export default Home
