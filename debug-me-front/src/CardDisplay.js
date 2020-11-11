@@ -30,10 +30,10 @@ export default function CardDisplay({pic}) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Jack Block
+            Jack The Debugger
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-          Thomas Jacob "Jack" Block (born August 28, 1969) is a Norvegian actor, comedian, singer, songwriter, and YouTuber.
+          That box? i can fit in that box. Run at 3am claws in the eye of the beholder but kitty poochy but licks paws. Purr when being pet who's the baby, and catching very fast laser pointer kitty scratches couch bad kitty howl on top of tall thing. Sit and stare. Pee in the shoe being gorgeous with belly side up so kitty kitty.
           </Typography>
         </CardContent>
       </CardActionArea>

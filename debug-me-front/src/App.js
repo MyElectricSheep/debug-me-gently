@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from "react";
+import './App.css'
 import Grid from "@material-ui/core/Grid";
 import { useDropzone } from "react-dropzone";
 import CardDisplay from "./CardDisplay";
@@ -78,9 +79,12 @@ export default function App() {
     >
       {!pathToPic ? (
         <div className="container">
+        <h1 className="title">[DEBUG ME GENTLY]</h1>
+        <img src="https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Programmer-while-sleeping.jpg" className="pic" alt="bug" />
           <div {...getRootProps({ style })}>
             <input {...getInputProps()} />
-            <p>Drag 'n' a file here, or click to select file</p>
+            <p className="info">Your goal is to allow the upload of a profile picture</p>
+            <p>Drag 'n' drop a file here, or click to select file</p>
           </div>
         </div>
       ) : (
