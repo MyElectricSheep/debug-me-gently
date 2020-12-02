@@ -2,7 +2,9 @@
 
 This is a workshop to learn `debugging`!
 
-You are given a React application whose purpose is to let the user upload a profile picture, store it in the back-end, which, in return, should send a reference pointing to that picture back to the client which can in return display it proudly!
+You are given a React application and a Node application.
+
+The front-end's purpose is to let the user upload a profile picture, store it in the back-end, which, in return, should send a reference pointing to that picture back to the client which can in return display it proudly!
 
 --> Problem: Both of the front-end and the back-end are broken! 
 
