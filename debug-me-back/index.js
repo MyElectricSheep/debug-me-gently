@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '/public/uploads')));
 app.post('/upload-profile-pic', upload.single('profile_pic'), (req, res) => {
     const {file, fileValidationError} = res
     if (!file) {
-      res.status(400).send('pouet') // 400 Bad Request
+      res.status(400).send('Please upload a file') // 400 Bad Request
     }
     if (fileValidationError) {
       res.status(400).send(fileValidationError);
