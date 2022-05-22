@@ -1,5 +1,8 @@
 # Debug Me Gently
 
+- ##### This is an exercise I created for the [WBS Coding School](https://www.wbscodingschool.com/) to make web dev students practice their **debugging** skills in a fullstack NodeJS / React context.
+- ##### This repo contains the correction of the exercise.
+
 This is a workshop to learn `debugging`!
 
 You are given a React application and a Node application.
